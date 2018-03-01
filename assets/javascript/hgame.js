@@ -7,10 +7,10 @@ var wordBank = ['star wars', 'pulp fiction', 'mad max', 'king kong',
 
 var mystoMovie = wordBank[Math.floor(Math.random() * wordBank.length)]; console.log(mystoMovie)
 
-var mystery = mystoMovie
+
 
 var wins = 0;
-var guessesLeft = 10;
+var guessesLeft = 6;
 var pastGuess = [];
  
 // create blanks based on word length
@@ -49,18 +49,28 @@ document.onkeyup = function(event) {
 
         }
         if( underScore.join('') === mystoMovie) {
-            alert('win')
+            
             wins++;
-            guessesLeft = 10;
+            guessesLeft = 6;
             pastGuess = [];
+            mystoMovie = wordBank[Math.floor(Math.random() * wordBank.length)]; console.log(mystoMovie)
+            underScore = [];
+            createWordBlanks();
+
         }
-        //if ( underScore.join('') !== mystoMovie) {
-          //  guessesLeft--;
-            //pastGuess.push(userLetterGuess);
     }
+    
     else {
         pastGuess.push(userLetterGuess)
         guessesLeft--;
+    }
+
+    if (guessesLeft === 0) {
+        guessesLeft = 6;
+        pastGuess = [];
+        mystoMovie = wordBank[Math.floor(Math.random() * wordBank.length)]; console.log(mystoMovie)
+        underScore = [];
+        createWordBlanks();
     }
     
     var html = 
