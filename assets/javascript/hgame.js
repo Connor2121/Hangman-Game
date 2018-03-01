@@ -72,7 +72,7 @@ document.onkeyup = function(event) {
         underScore = [];
         createWordBlanks();
     }
-    
+ 
     var html = 
     '<h1>Hangman Movies Edition</h1>' +
     
@@ -83,9 +83,12 @@ document.onkeyup = function(event) {
     "<h3>Letters Already Guesses " + pastGuess.join() + '</h3>';
     
     document.getElementById("hGame").innerHTML = html;
+}
     
-    
-    
+    var startUnderscore =
+    "<h3>Current Word " + underScore + "</h3>";
+
+    document.getElementById("firstWord").innerHTML = startUnderscore;
    
     
-}
+
