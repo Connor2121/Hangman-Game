@@ -12,8 +12,7 @@ var mystery = mystoMovie
 var wins = 0;
 var guessesLeft = 10;
 var pastGuess = [];
- var rightLetter = [];
- var wrongLetter = [];
+ 
 // create blanks based on word length
 
 var underScore = [];
