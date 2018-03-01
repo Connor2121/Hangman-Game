@@ -49,6 +49,10 @@ document.onkeyup = function(event) {
             }
 
         }
+        if( underScore.join('') === mystoMovie) {
+            alert('win')
+            wins++;
+        }
 
         
         
