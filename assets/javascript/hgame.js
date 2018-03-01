@@ -35,7 +35,7 @@ document.onkeyup = function(event) {
     
     if(mystoMovie.indexOf(userLetterGuess) > -1) {
         
-        rightLetter.push(userLetterGuess);
+        pastGuess.push(userLetterGuess);
     // for (var i = 0; i < x; i++) {}
         
         for (var i = 0; i < mystoMovie.length; i++){
@@ -52,12 +52,17 @@ document.onkeyup = function(event) {
         if( underScore.join('') === mystoMovie) {
             alert('win')
             wins++;
+            guessesLeft = 10;
+            pastGuess = [];
         }
-
-        
-        
-        
-        }
+        //if ( underScore.join('') !== mystoMovie) {
+          //  guessesLeft--;
+            //pastGuess.push(userLetterGuess);
+    }
+    else {
+        pastGuess.push(userLetterGuess)
+        guessesLeft--;
+    }
     
     var html = 
     '<h1>Hangman Movies Edition</h1>' +
