@@ -1,0 +1,12 @@
+#hGame{
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+body{
+    background-image: url("http://www.amazingcapitals.com/images/sized/content/locations/dusseldorf/images/things-to-do/movies3-du-969x0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}

@@ -50,6 +50,7 @@ document.onkeyup = function(event) {
         }
         if( underScore.join('') === mystoMovie) {
             
+            alert("Congrats, " + mystoMovie + " is correct!")
             wins++;
             guessesLeft = 6;
             pastGuess = [];
@@ -78,7 +79,7 @@ document.onkeyup = function(event) {
     
     "<h3>Press any key to get started</h3>" +
     "<h3>Wins " + wins + "</h3>" +
-    "<h3>Current Word " + underScore + "</h3>" +
+    "<h3>Current Word " + underScore.join(" ") + "</h3>" +
     "<h3>Guesses Remaining " + guessesLeft + "</h3>" +
     "<h3>Letters Already Guesses " + pastGuess.join() + '</h3>';
     
@@ -86,7 +87,7 @@ document.onkeyup = function(event) {
 }
     
     var startUnderscore =
-    "<h3>Current Word " + underScore + "</h3>";
+    "<h3>Current Word " + underScore.join(" ") + "</h3>";
 
     document.getElementById("firstWord").innerHTML = startUnderscore;
    
